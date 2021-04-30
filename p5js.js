@@ -1,7 +1,7 @@
 //https://openprocessing.org/sketch/create
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(0);
+	background(255,255,255);
 	x = 0
 	y = 0
 	pX = 0
@@ -21,6 +21,7 @@ function draw() {
 	diffY = Math.abs(lerpY-y)
 	if(diffX + diffY > 2) {
 		angle = atan(diffY/diffX)
+		fill(255,255,255)
 		text(rad2deg(angle), 20, 50)
 		adyX = cos(angle+Math.PI/2) * 10
 		text("adyX:" + adyX, 20, 100)
